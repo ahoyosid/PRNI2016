@@ -4,8 +4,8 @@
 \usepackage{graphicx}
 \usepackage{algorithm}
 \usepackage{algorithmic}
-%\usepackage{biblatex}
-\usetheme{Warsaw}  
+\usetheme{Warsaw} 
+ 
 
 \setbeamertemplate{footline}[frame number]
 
@@ -84,7 +84,7 @@ space with a distortion up to $\epsilon$, where $k = O(\log(n)/\epsilon^2).$ }
 \end{figure}
 
 \begin{itemize}
-\item Theoretical guaranties: approximation of pairwise 
+\item Theoretical guaranties \cite{Johnson1984}: approximation of pairwise 
 distances.
 \item It is data-agnostic.
 \item It is difficult to bring to the brain space.
@@ -100,7 +100,8 @@ distances.
 \includegraphics[width=0.75\linewidth]{figures/nystroem.pdf}
 \end{figure}
 
-Approximation by random sampling: randomly selecting a subset of rows
+Approximation by random sampling: randomly selecting a subset of rows 
+\cite{Wang:2013:ICM:2567709.2567748}
 \begin{itemize}
     \item Mainly used to approximate a Gram matrix, $\mathbf{K} = 
     \mathbf{X}\,\mathbf{X}^\mathsf{T} \in \mathbb{R}^{n\times n}$.
@@ -220,11 +221,13 @@ structure of brain images.
 \includegraphics[width=0.3\linewidth]{figures/nilearn-logo.png}
 \end{figure}
 
+An example is available on github \alert{github.com/ahoyosid/PRNI2016} 
+
 \end{frame}
 
 \begin{frame}\frametitle{References}
 \bibliographystyle{amsalpha}
-\bibliography{biblio.bib}
+\bibliography{biblio}
 \end{frame}
 
 \end{document}
