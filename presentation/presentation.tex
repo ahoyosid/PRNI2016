@@ -8,6 +8,7 @@
  
 
 \setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
 
 \title[Fast brain decoding]{Fast brain decoding with random sampling and random 
 projections}
@@ -168,17 +169,18 @@ accuracy.}
 \end{frame}
 
 
-\begin{frame}\frametitle{\textbf{Bringing the reduction to the brain space}}
+\begin{frame}\frametitle{\textbf{Comparing} random sampling and non-reduced 
+brain}
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{figures/correlation_1.pdf}
-\caption{\textbf{Consistency of the discriminative weights after dimensionality 
-reduction.} Nystr\"om finds consistent maps and it performs as good as raw.}
+\caption{\textbf{Consistency of prediction after dimensionality 
+reduction.} Nystr\"om performs as good as raw.}
 \end{figure}
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\frametitle{\textbf{Bringing the reduction to the brain space}}
 \begin{figure}
 \centering
 \includegraphics[width=0.43\linewidth]{figures/raw_faces_vs_house_1.pdf}\quad 
@@ -200,6 +202,8 @@ reduction.} Nystr\"om finds consistent maps and it performs as good as raw.}
 
 
 \begin{frame}\frametitle{\textbf{Conclusion:} Random sampling to go}
+\begin{columns}
+\begin{column}{1.1\linewidth}
 \begin{block}{}
 \begin{itemize}
 \item Nystr\"om and random projections yield \structure{\textbf{impressive 
@@ -207,14 +211,17 @@ speed gains}} $> 16$.
 \item Nystr\"om finds better solutions than random projections with 
 \structure{\textbf{the same time budget}}.
 \item For a large-scale dataset (HCP), Nystr\"om \structure{\textbf{speeds up}} 
-the 
-decoding by a factor of $\approx 280$.
+the decoding by a factor of $\approx 280$.
+\item Compared with LibSVM gains from \structure{$\mathbf{50\times}$} to 
+\structure{$\mathbf{1000\times}$}.
 \item Nystr\"om for linear kernels can be \structure{\textbf{brought back}} 
-into the brain space.
+in brain space.
 \item \structure{\textbf{Data-driven methods}} can capture the underlying 
 structure of brain images.
 \end{itemize}
 \end{block}
+\end{column}
+\end{columns}
 
 \begin{figure}
 \includegraphics[width=0.3\linewidth]{figures/scikit-learn-logo.png}\hfill
